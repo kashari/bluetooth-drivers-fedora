@@ -17,7 +17,7 @@ sudo modprobe btusb
 
 sudo systemctl restart bluetooth
 
-awk '{gsub(/#ControllerMode = dual/,"ControllerMode = bredr")}1' /etc/bluetooth/main.conf > temp && mv temp /etc/bluetooth/main.conf
+sudo awk '{gsub(/#ControllerMode = dual/,"ControllerMode = bredr")}1' /etc/bluetooth/main.conf > temp && mv temp /etc/bluetooth/main.conf
 
 sudo systemctl restart bluetooth
 
